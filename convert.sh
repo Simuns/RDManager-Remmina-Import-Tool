@@ -10,6 +10,8 @@ server=$(awk -F "," '{print $1}' import.csv | sed -n ''$i'p')
 port=$(awk -F "," '{print $2}' import.csv | sed -n ''$i'p')
 if [ -z "$port" ]
 then
+      :
+else
       server="${server}:${port}"
 fi
 echo "Creating IMP-$name-$group"
