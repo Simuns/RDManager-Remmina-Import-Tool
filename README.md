@@ -12,10 +12,8 @@ Rename your csv file import.csv and insert into "RDManager-Remmina-Import-Tool" 
 ### 2  
 Change directory to RDManager-Remmina-Import-Tool/
 ### 3  
-adjust forloop to include amount of lines in csv file. (This is the second line in convert.sh file)
-### 4  
 run script 'bash convert.sh'
-### 5  
+### 4  
 cp export/* ~/.local/share/remmina/
-### 6  
+### 5  
 your RDP connections should now be accessable through remmina

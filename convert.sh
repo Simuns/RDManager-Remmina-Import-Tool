@@ -1,7 +1,8 @@
 mkdir export
-for i in {2..100}
-do
-
+csvlenght=$(wc -l import.csv | awk '{print $1}')
+i=2
+while [ "$i" -le "$csvlenght" ]; do
+i=$(($i + 1))
 name=$(awk -F "," '{print $4}' import.csv | sed -n ''$i'p' | sed 's/ /-/g' | sed 's/---/-/g')
 group=$(awk -F "," '{print $5}' import.csv | sed -n ''$i'p' | sed 's/ /-/g')
 server=$(awk -F "," '{print $1}' import.csv | sed -n ''$i'p')
