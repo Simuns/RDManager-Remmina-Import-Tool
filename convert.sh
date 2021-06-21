@@ -1,5 +1,6 @@
 mkdir export
 csvlenght=$(wc -l import.csv | awk '{print $1}')
+csvlenght=$(($csvlenght - 1))
 i=2
 while [ "$i" -le "$csvlenght" ]; do
 i=$(($i + 1))
@@ -9,14 +10,9 @@ server=$(awk -F "," '{print $1}' import.csv | sed -n ''$i'p')
 port=$(awk -F "," '{print $2}' import.csv | sed -n ''$i'p')
 if [ -z "$port" ]
 then
-      echo "no custom port" 
-else
       server="${server}:${port}"
 fi
-echo "----NEW HOST------"
-echo "name $name"
-echo "group $group"
-echo "server $server"
+echo "Creating IMP-$name-$group"
 cp blank.remmina export/IMP-$name-$group.remmina
 cat <<EOF >> export/IMP-$name-$group.remmina
 name=$name
