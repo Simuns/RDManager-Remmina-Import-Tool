@@ -14,6 +14,6 @@ Change directory to RDManager-Remmina-Import-Tool/
 ### 3  
 run script 'bash convert.sh'
 ### 4  
-cp export/* ~/.local/share/remmina/
+run 'cp export/* ~/.local/share/remmina/'
 ### 5  
 your RDP connections should now be accessable through remmina
