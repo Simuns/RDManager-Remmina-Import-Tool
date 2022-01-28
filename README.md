@@ -17,3 +17,6 @@ run script 'bash convert.sh'
 run 'cp export/* ~/.local/share/remmina/'
 ### 5  
 your RDP connections should now be accessable through remmina
+
+
+#### Author: Símun Højgaard Lutzen | simunhojgaard@gmail.com
